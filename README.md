@@ -10,7 +10,7 @@ FuelApplication is a Java-based application designed to calculate the fuel requi
 - `com.nasa.fuelapplication.controller`: Contains classes responsible for parsing input data.
 - `com.nasa.fuelapplication.domain`: This package includes domain classes such as `ActionType`, `FlightStep`, and `Planet` that represent the core concepts of the application.
 - `com.nasa.fuelapplication.services`: Service classes that perform the fuel calculation logic.
-- `com.nasa.fuelapplication.services.test`: Contains unit tests for the services.
+- src/test/java `com.nasa.fuelapplication.services`: Contains unit tests for the services.
 
 ## Key Classes
 
