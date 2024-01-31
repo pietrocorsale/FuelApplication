@@ -73,6 +73,30 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.plugin.version}</version>
             </plugin>
+            <plugin>
+    <groupId>com.akathist.maven.plugins.launch4j</groupId>
+    <artifactId>launch4j-maven-plugin</artifactId>
+    <version>1.7.25</version> <!-- Usa l'ultima versione disponibile -->
+    <executions>
+        <execution>
+            <id>l4j-clui</id>
+            <phase>package</phase>
+            <goals>
+                <goal>launch4j</goal>
+            </goals>
+            <configuration>
+                <headerType>console</headerType> <!-- Usa 'console' se la tua app ha un'interfaccia a riga di comando -->
+                <jar>${project.build.directory}/${project.build.finalName}.jar</jar>
+                <outfile>${project.build.directory}/${project.build.finalName}.exe</outfile>
+                <icon>${project.basedir}/src/main/resources/gas-pump.ico</icon> <!-- Percorso al file dell'icona -->
+                <downloadUrl>http://java.com/download</downloadUrl>
+                <jre>
+                    <minVersion>1.8.0</minVersion> <!-- Specifica la versione minima del JRE richiesta -->
+                </jre>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
         </plugins>
     </build>
 </project>
